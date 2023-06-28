@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Blog | {% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+  </head>
+  <body>
+    <div>
+      <a href="{% url 'home' %}">IR A HOME</a>
+      <a href="{% url 'nosotros' %}">IR A NOSOTROS</a>
+      <a href="{% url 'noticias:listar' %}">IR A NOTICIAS</a>
+    </div>
+    {% block contenido %}{% endblock contenido %}
+  </body>
+</html>
